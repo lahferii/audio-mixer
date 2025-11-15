@@ -24,9 +24,6 @@ class BiquadStereo:
         self.a1=a1/a0
         self.a2=a2/a0
 
-    # ---------------------
-    # LPF
-    # ---------------------
     def set_lpf(self,fs,f0):
         w0 = 2*math.pi*f0/fs
         cosw = math.cos(w0)
@@ -42,9 +39,6 @@ class BiquadStereo:
 
         self._set(b0,b1,b2,a0,a1,a2)
 
-    # ---------------------
-    # HPF
-    # ---------------------
     def set_hpf(self,fs,f0):
         w0 = 2*math.pi*f0/fs
         cosw = math.cos(w0)
@@ -60,9 +54,6 @@ class BiquadStereo:
 
         self._set(b0,b1,b2,a0,a1,a2)
 
-    # ---------------------
-    # BPF (constant skirt gain)
-    # ---------------------
     def set_bpf(self,fs,f0,Q):
         w0 = 2*math.pi*f0/fs
         cosw = math.cos(w0)
@@ -78,7 +69,6 @@ class BiquadStereo:
 
         self._set(b0,b1,b2,a0,a1,a2)
 
-    # ---------------------
     def process(self,x):
         out = np.empty_like(x)
         for n in range(x.shape[0]):
