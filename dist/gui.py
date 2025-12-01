@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from PyQt6 import QtWidgets, QtCore
 from scipy import signal
 from dist.equalizerParametric import EQ
-from dist.filterParametric import BiquadStereo
+from dist.filterParametric import Stereo
 
 class MainWindow(QtWidgets.QWidget):
     def __init__(self, engine, params):
