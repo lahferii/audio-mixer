@@ -8,12 +8,10 @@ class EQ:
         self.high = BiquadStereo()
 
     def update(self, bass_gain, mid_gain, treble_gain):
-        # cutoff default
         fc_low  = 250
         fc_mid  = 2000
         fc_high = 5000
 
-        # gain diterapkan setelah filter
         self.bass_gain = bass_gain
         self.mid_gain = mid_gain
         self.treble_gain = treble_gain
