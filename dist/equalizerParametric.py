@@ -1,4 +1,4 @@
-from dist.filter import BiquadStereo
+from dist.filter import Stereo
 
 class EQ:
     def __init__(self, fs):
