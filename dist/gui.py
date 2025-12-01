@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PyQt6 import QtWidgets, QtCore
 from scipy import signal
-from dist.equalizer import EQ
-from dist.filter import BiquadStereo
+from dist.equalizerParametric import EQ
+from dist.filterParametric import BiquadStereo
 
 class MainWindow(QtWidgets.QWidget):
     def __init__(self, engine, params):

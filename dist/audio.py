@@ -1,7 +1,7 @@
 import numpy as np
 import soundfile as sf
 import sounddevice as sd
-from dist.equalizer import EQ
+from dist.equalizerParametric import EQ
 
 def stereoize(x):
     if x.ndim == 1:
