@@ -1,7 +1,7 @@
 import math
 import numpy as np
 
-class BiquadStereo:
+class Stereo:
     def __init__(self):
         self.b0 = 1.0
         self.b1 = 0.0

@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 from PyQt6 import QtWidgets, QtCore
 from scipy import signal
 from dist.equalizerParametric import EQ
-from dist.filterParametric import Stereo
+
+
 
 class MainWindow(QtWidgets.QWidget):
     def __init__(self, engine, params):
@@ -169,6 +170,7 @@ class MainWindow(QtWidgets.QWidget):
         after=10*np.log10(Pa+1e-12)
 
         plt.figure(figsize=(8,4))
+        plt.title("Spektrum Sebelum Dan Sesudah EQ")
         plt.plot(f,before,label="Before")
         plt.plot(f,after,label="After")
         plt.xscale("log")

@@ -1,11 +1,11 @@
-from dist.filter import BiquadStereo
+from dist.filterParametric import Stereo
 
 class EQ:
     def __init__(self, fs):
         self.fs = fs
-        self.low = BiquadStereo()
-        self.mid = BiquadStereo()
-        self.high = BiquadStereo()
+        self.low = Stereo()
+        self.mid = Stereo()
+        self.high = Stereo()
 
     def update(self, bass_gain, mid_gain, treble_gain):
         self.low.set_low_shelf(self.fs, 400.0, bass_gain)
